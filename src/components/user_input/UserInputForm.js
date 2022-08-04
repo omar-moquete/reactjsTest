@@ -31,8 +31,8 @@ function UserInputForm(props) {
   };
 
   return (
-    <form onSubmit={submit}>
-      <Card>
+    <Card>
+      <form onSubmit={submit}>
         <label>Username</label>
         <input
           type="text"
@@ -42,8 +42,8 @@ function UserInputForm(props) {
         <label>Age (Years)</label>
         <input type="text" className={styles.age} onChange={ageHandler} />
         <button>Add User</button>
-      </Card>
-    </form>
+      </form>
+    </Card>
   );
 }
 
