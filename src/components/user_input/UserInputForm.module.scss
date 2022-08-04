@@ -1,0 +1,10 @@
+@use "../../variables";
+@use "../../mixins";
+
+button {
+  width: fit-content;
+  padding: 5px 12px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  background-color: variables.$accent-color;
+}

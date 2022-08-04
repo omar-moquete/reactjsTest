@@ -1,0 +1,14 @@
+@use "../../variables";
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 8px;
+    border: 1px solid variables.$accent-color;
+  }
+}

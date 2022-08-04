@@ -1,0 +1,42 @@
+@use "../../variables";
+
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.735);
+
+  backdrop-filter: blur(4px);
+  z-index: 200;
+
+  .content {
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "Oops!";
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      top: 0;
+      left: 0;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      width: 100%;
+      height: 40px;
+      background-color: variables.$accent-color;
+    }
+  }
+}
+
+.invisible {
+  display: none;
+}
