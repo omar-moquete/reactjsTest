@@ -13,12 +13,21 @@ function UserInputForm(props) {
     e.preventDefault();
 
     if (Array.from(username.trim()).some((char) => !isNaN(char))) {
-      props.setModalMessage("Numbers are not allowed!");
+      props.setModalMessage("Numbers are not allowed for username!");
       props.setIsModalVisible(true);
     } else if (!username.trim()) {
-      props.setModalMessage("Cannot be empty");
+      props.setModalMessage("Username cannot be empty!");
       props.setIsModalVisible(true);
-    } else props.submit({ id: Math.random(), username, age });
+    } else if (!age.trim()) {
+      props.setModalMessage("Age cannot be empty!");
+      props.setIsModalVisible(true);
+    } else if (Array.from(age.trim()).some((char) => isNaN(char))) {
+      props.setModalMessage("Age can only be in numbers!");
+      props.setIsModalVisible(true);
+    } else {
+      username.trim() && isNaN(username);
+      props.submit({ id: Math.random(), username, age });
+    }
   };
 
   return (
